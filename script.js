@@ -15,6 +15,11 @@ let highScore = 0;
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 // -- FUNÇÕES DE LÓGICA
+// Função para exibir as mensagens
+const displayMessage = (text) => {
+  message.textContent = text;
+};
+
 // Função principal para a lógica do jogo
 const checkGuess = () => {
   // Pega o valor do palpite e converte para número
@@ -24,15 +29,15 @@ const checkGuess = () => {
 
   // Quando não há entrada
   if (!guess) {
-    message.textContent = "⛔ No number!";
+    displayMessage("⛔ No number!");
 
     // Quando o número é maior que 20
   } else if (guess > 20) {
-    message.textContent = "🛑 Please select a number between 1 and 20.";
+    displayMessage("🛑 Please select a number between 1 and 20.");
 
     // Quando o jogador acerta o número
   } else if (guess === secretNumber) {
-    message.textContent = "🎆 Correct Number!";
+    displayMessage("🎆 Correct Number!");
     // Revela o número secreto
     number.textContent = secretNumber;
     // Altera o estilo do body
@@ -52,11 +57,10 @@ const checkGuess = () => {
       score--;
       spanScore.textContent = score;
       // Define a mensagem com base se o palpite é alto ou baixo
-      message.textContent =
-        guess > secretNumber ? "📉 Too high!" : "📈 Too low!";
+      displayMessage(guess > secretNumber ? "📉 Too high!" : "📈 Too low!");
     } else {
       // Quando o jogador perde
-      message.textContent = "😢 You lost the game!";
+      displayMessage("😢 You lost the game!");
       spanScore.textContent = 0;
     }
   }
@@ -71,7 +75,7 @@ const resetGame = () => {
   // Reseta o display do jogo
   spanScore.textContent = 20;
   number.textContent = "?";
-  message.textContent = "Start guessing...";
+  displayMessage("Start guessing...");
   document.querySelector(".guess").value = "";
 
   // Restaura os estilos
