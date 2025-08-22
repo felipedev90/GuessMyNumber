@@ -42,6 +42,6 @@ Acesse o Jogo:
 
 ## ✍️Autor
 
-Felipe Augusto - [GitHub](www.github.com/felipedev90)
+Felipe Augusto - [GitHub](https://github.com/felipedev90)
 
 Se tiver qualquer sugestão ou melhoria, sinta-se à vontade para abrir uma issue ou enviar um pull request!
