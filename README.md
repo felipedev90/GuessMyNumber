@@ -25,9 +25,13 @@ Este projeto foi construído como parte de uma revisão de conteúdo de JavaScri
 
 Acesse o Jogo:
 [Acesse aqui](https://felipedev90.github.io/GuessMyNumber/)
+
 1 - Digite um Número: Insira um número entre 1 e 20 na caixa de texto.
+
 2 - Clique em "Check!": O jogo irá dizer se seu palpite está muito alto, muito baixo ou se você acertou!
+
 3 - Tente Novamente: Se você errar, continue tentando até adivinhar o número.
+
 4 - Bata seu Recorde: Ao vencer, sua pontuação será comparada com o Highscore. Se for maior, você terá um novo recorde!
 
 ## 💻Tecnologias Utilizadas
